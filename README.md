@@ -13,27 +13,27 @@ go get -u repo.smlk.org/interact
 
 ``` golang
 func main() {
-	cmds := interact.Choose{
-		Title: "Select operation:",
-		Choices: []interact.Choice{
-			interact.NewChoice(
-				"Choice A",
-				ChoiceAHandler,
-			),
-			interact.NewChoice(
-				"Choice B",
-				ChoiceAHandler,
-			),
-			interact.NewChoice(
-				"Choice C",
-				ChoiceCHandler,
-			),
-		},
-		Loop: true,
-	}
-	_, err := cmds.Do()
-	if err != nil {
-		panic(err)
-	}
+    cmds := interact.Choose{
+        Title: "Select operation:",
+        Choices: []interact.Choice{
+            interact.NewChoice(
+                "Choice A",
+                ChoiceAHandler,
+            ),
+            interact.NewChoice(
+                "Choice B",
+                ChoiceAHandler,
+            ),
+            interact.NewChoice(
+                "Choice C",
+                ChoiceCHandler,
+            ),
+        },
+        Loop: true,
+    }
+    _, err := cmds.Do()
+    if err != nil {
+        panic(err)
+    }
 }
 ```
