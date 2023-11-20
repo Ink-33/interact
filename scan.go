@@ -34,3 +34,11 @@ func ScantoSting() string {
 	fmt.Scanln(&input)
 	return input
 }
+
+// ScantoStingWithHint print hint meaasge before scans user input to string.
+func ScantoStingWithHint(hint string) string {
+	fmt.Print(hint)
+	input := ""
+	fmt.Scanln(&input)
+	return input
+}
